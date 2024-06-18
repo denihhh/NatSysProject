@@ -125,20 +125,145 @@ codespace:x:1000:1000::/home/codespace:/bin/bash
 sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
 
 3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
+__df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         32847680 10381996  20771588  34% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        0     65536   0% /dev/shm
+/dev/root       30298176 24421036   5860756  81% /vscode
+/dev/sda1       46127956       92  43752288   1% /tmp
+/dev/loop3      32847680 10381996  20771588  34% /workspaces__
+
 4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
-5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
-6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
-7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
-8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
-9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
-10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+__du
+
+1972    ./images
+8       ./.git/info
+4       ./.git/lfs/tmp
+8       ./.git/lfs
+68      ./.git/hooks
+4       ./.git/branches
+8       ./.git/refs/heads
+4       ./.git/refs/tags
+8       ./.git/refs/remotes/origin
+12      ./.git/refs/remotes
+28      ./.git/refs
+8       ./.git/objects/fc
+8       ./.git/objects/f6
+8       ./.git/objects/ab
+8       ./.git/objects/fe
+12      ./.git/objects/70
+8       ./.git/objects/f2
+8       ./.git/objects/3f
+8       ./.git/objects/0b
+8       ./.git/objects/eb
+12      ./.git/objects/44
+8       ./.git/objects/81
+8       ./.git/objects/86
+8       ./.git/objects/c3
+8       ./.git/objects/fd
+8       ./.git/objects/20
+8       ./.git/objects/57
+8       ./.git/objects/1b
+8       ./.git/objects/24
+8       ./.git/objects/b9
+8       ./.git/objects/b2
+8       ./.git/objects/3a
+12      ./.git/objects/17
+8       ./.git/objects/45
+8       ./.git/objects/93
+4       ./.git/objects/info
+8       ./.git/objects/c6
+8       ./.git/objects/71
+8       ./.git/objects/5b
+8       ./.git/objects/e7
+12      ./.git/objects/1c
+8       ./.git/objects/58
+8       ./.git/objects/60
+12      ./.git/objects/af
+8       ./.git/objects/a3
+12      ./.git/objects/14
+8       ./.git/objects/d8
+8       ./.git/objects/83
+8       ./.git/objects/b6
+8       ./.git/objects/fa
+12      ./.git/objects/b5
+12      ./.git/objects/d2
+12      ./.git/objects/73
+8       ./.git/objects/cb
+12      ./.git/objects/e5
+12      ./.git/objects/a1
+8       ./.git/objects/0d
+12      ./.git/objects/72
+12      ./.git/objects/ff
+8       ./.git/objects/7b
+8       ./.git/objects/4a
+12      ./.git/objects/64
+8       ./.git/objects/4f
+8       ./.git/objects/74
+12      ./.git/objects/6e
+8       ./.git/objects/e9
+8       ./.git/objects/41
+12      ./.git/objects/62
+1824    ./.git/objects/pack
+12      ./.git/objects/2e
+12      ./.git/objects/06
+8       ./.git/objects/a6
+12      ./.git/objects/3d
+8       ./.git/objects/49
+16      ./.git/objects/fb
+8       ./.git/objects/52
+8       ./.git/objects/91
+8       ./.git/objects/47
+8       ./.git/objects/96
+8       ./.git/objects/f9
+8       ./.git/objects/cd
+8       ./.git/objects/4b
+8       ./.git/objects/04
+2476    ./.git/objects
+8       ./.git/logs/refs/heads
+8       ./.git/logs/refs/remotes/origin
+12      ./.git/logs/refs/remotes
+24      ./.git/logs/refs
+32      ./.git/logs
+2656    ./.git
+4648    .__
+
+
+6. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
+__ls__
+
+__README.md  images__
+
+8. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
+__ls -asl__
+
+__total 32
+ 4 drwxrwxrwx+ 4 codespace root  4096 Jun 11 05:42 .
+ 4 drwxr-xrwx+ 5 codespace root  4096 Jun 11 05:42 ..
+ 4 drwxrwxrwx+ 9 codespace root  4096 Jun 18 04:04 .git
+16 -rw-rw-rw-  1 codespace root 12856 Jun 18 04:42 README.md
+ 4 drwxrwxrwx+ 2 codespace root  4096 Jun 11 05:42 images__
+
+9. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
+
+__free -h__
+
+              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.3Gi       263Mi        64Mi       6.2Gi       6.1Gi
+Swap:            0B          0B          0B
+
+
+10. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
+11. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
+12. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
+13. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+14. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+15. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+16. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+17. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+18. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+19. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
 
 ## Running your own container instance.
 
