@@ -95,7 +95,8 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
 
 2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
 
-__cat /etc/passwd
+__cat /etc/passwd__
+
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -120,7 +121,7 @@ systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/n
 systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
 messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
 codespace:x:1000:1000::/home/codespace:/bin/bash
-sshd:x:105:65534::/run/sshd:/usr/sbin/nologin__
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
 
 3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
 4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
