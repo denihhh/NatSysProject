@@ -24,7 +24,8 @@ Team Mates:
 
 1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __Fill answer here__.
     https://github.com/denihhh/NatSysProject.git
-2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
+2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__..
+
    There is 1 file named README.md and 1 folder named images
 
 
