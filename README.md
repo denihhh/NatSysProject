@@ -65,7 +65,9 @@ Team Mates:
 2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** 
 
     __RAM = 4GB/8GB __.
+   
     __DISK = 32GB/64GB __.
+   
     __VCPU = 2/4 __.
 
 
