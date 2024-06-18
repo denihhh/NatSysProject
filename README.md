@@ -90,11 +90,9 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
 
 1. Run the command **pwd** . ***(1 mark)*** __Fill answer here__.
     
-    __pwd
-   
-    /workspaces/NatSysProject__
+   ![image](https://github.com/denihhh/NatSysProject/assets/152835701/0ed4b731-0839-47b8-aa06-866735434db3)
 
-3. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
+2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
 
 __cat /etc/passwd__
 
