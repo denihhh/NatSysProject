@@ -64,11 +64,11 @@ Team Mates:
 
 2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** 
 
-    __RAM = 4GB/8GB __.
+    __RAM = 4GB/8GB__.
    
-    __DISK = 32GB/64GB __.
+    __DISK = 32GB/64GB__.
    
-    __VCPU = 2/4 __.
+    __VCPU = 2/4__.
 
 
 3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
