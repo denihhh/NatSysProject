@@ -94,43 +94,11 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
 
 2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
 
-__cat /etc/passwd__
-
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
-gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
-systemd-timesync:x:101:101:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
-systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
-systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
-messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
-codespace:x:1000:1000::/home/codespace:/bin/bash
-sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/22796132-0505-4e9f-9b12-116794eb15bd)
 
 3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
-__df
-Filesystem     1K-blocks     Used Available Use% Mounted on
-overlay         32847680 10381996  20771588  34% /
-tmpfs              65536        0     65536   0% /dev
-shm                65536        0     65536   0% /dev/shm
-/dev/root       30298176 24421036   5860756  81% /vscode
-/dev/sda1       46127956       92  43752288   1% /tmp
-/dev/loop3      32847680 10381996  20771588  34% /workspaces__
+
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/3b1e1aa0-f3ff-4d6d-bfaa-09f7ba89466a)
 
 4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
 __du
@@ -228,40 +196,108 @@ __du
 4648    .__
 
 
-6. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
+5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
 __ls__
 
-__README.md  images__
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/c0937592-4c08-4fc5-8068-0c28021ace25)
 
-8. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
-__ls -asl__
+6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
 
-__total 32
- 4 drwxrwxrwx+ 4 codespace root  4096 Jun 11 05:42 .
- 4 drwxr-xrwx+ 5 codespace root  4096 Jun 11 05:42 ..
- 4 drwxrwxrwx+ 9 codespace root  4096 Jun 18 04:04 .git
-16 -rw-rw-rw-  1 codespace root 12856 Jun 18 04:42 README.md
- 4 drwxrwxrwx+ 2 codespace root  4096 Jun 11 05:42 images__
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/3694da30-3d8f-4ad5-8e9b-7d8843325cd9)
 
-9. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
+7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
 
-__free -h__
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/c8ecc3ce-4a58-4c43-9016-5b0dd789e1a9)
 
-              total        used        free      shared  buff/cache   available
-Mem:          7.7Gi       1.3Gi       263Mi        64Mi       6.2Gi       6.1Gi
-Swap:            0B          0B          0B
+8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
+
+cat /proc/cpuinfo
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3175.360
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb
+ rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm                                           bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.84
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3224.308
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb
+ rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm                                           bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.84
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
 
 
-10. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
-11. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
-12. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
-13. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
-14. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
-15. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-16. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
-17. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-18. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-19. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
+
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/5d89f618-54d3-4abc-91f8-fbb93789bdf1)
+
+10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
+
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/2b89be4e-6350-4247-adb8-74b0e529eb76)
+
+11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+    177Mi 
+
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+    
+![image](https://github.com/denihhh/NatSysProject/assets/152835701/f8784885-4c36-41e6-a432-7be0db98556a)
+
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+
+Linux codespaces-a1782f 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+
+    ls: Lists filenames.
+    ls -asl: Lists all files (including hidden) with sizes and detailed information.
+
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+
+
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
 
 ## Running your own container instance.
 
