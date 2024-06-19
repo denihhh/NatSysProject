@@ -5,7 +5,7 @@ Group Name: __Kroni IT__.
 Team Mates:
 1. DANISH HAIKAL BIN MOHAMMAD (2219885)
 2. AHMAD ZULFAHMI BIN ZAINAL (2219235)
-3. __Fill name__ and __matric no__
+3. MUHAMMAD FARIS BIN ROSLI (2215489)
 
 ## Rules
 1. You are allowed to have **3 group** members.
