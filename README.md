@@ -73,6 +73,9 @@ Team Mates:
 
 3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
 
+__Commit: Saves a snapshot of your code, tracks changes, and documents progress.
+Sync: Shares your changes with the team, backs up your work, and keeps everyone updated with the latest version.__
+
 ## Exploring the Terminal
 
 1. Look at the TERMINAL tab. Explore and run commands according to the questions below. 
