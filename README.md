@@ -303,47 +303,25 @@ Linux codespaces-a1782f 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08
 ## Running your own container instance.
 
 1. At the terminal, run a linux instance. By typing the following command. 
-
+```
 docker pull debian
 docker run --detach -it debian
-
-bash
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker pull debian
-Using default tag: latest
-
-latest: Pulling from library/debian
-Digest: sha256:a92ed51e0996d8e9de041ca05ce623d2c491444df6a535a566dabd5cb8336946
-Status: Image is up to date for debian:latest
-docker.io/library/debian:latest
-
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker run --detach -it debian
-21bc997724f53455054a6a8e2f4fa09732843d4af0c2ea54af79df7777b8844e
-
+```
 2. This will run the debian container. To check if the debian container is running, type
-bash
+```bash
 @joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
 f65be1987f84   debian    "bash"    4 minutes ago   Up 4 minutes             romantic_jackson
-
-bash
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker ps -a
-CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
-e53e712fdcc0   debian    "bash"    30 seconds ago   Up 27 seconds             stupefied_keller
-
+```
 
 3. Keep note of the name used by your container, this is usually given random names unless you specify your own name. Now run a bash command on the container. Make sure you use the name of your container instead of the one shown here. 
-bash
+```bash
 docker exec -i -t romantic_jackson /bin/bash
-
-bash
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker exec -i -t e53e712fdcc0 /
-bin/bash
-
-
+```
 
 4. Create a file on the container. First you must make sure you are in the bash command prompt of the container. The container is new, and does not have any software other than the debian OS. To create a new file, you will need an editor installed. In the bash shell of the container, run the package manager apt-get to install nano text editor. 
 
-bash
+```bash
 root@f65be1987f84:~# apt-get update      
 
 root@f65be1987f84:~# apt-get install nano
@@ -351,81 +329,24 @@ root@f65be1987f84:~# apt-get install nano
 root@f65be1987f84:~# cd /root
 
 root@f65be1987f84:~# nano helloworld.txt
- 
-bash
-root@e53e712fdcc0:/# apt-get update
-Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
-Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
-Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
-Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8786 kB]
-Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [13.8 kB]
-Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [160 kB]
-Fetched 9214 kB in 1s (8617 kB/s)                         
-Reading package lists... Done
-root@e53e712fdcc0:/# apt-get install nano
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following additional packages will be installed:
-  libgpm2 libncursesw6
-Suggested packages:
-  gpm hunspell
-The following NEW packages will be installed:
-  libgpm2 libncursesw6 nano
-0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
-Need to get 837 kB of archives.
-After this operation, 3339 kB of additional disk space will be used.
-Do you want to continue? [Y/n] Y
-Get:1 http://deb.debian.org/debian bookworm/main amd64 libncursesw6 amd64 6.4-4 [134 kB]
-Get:2 http://deb.debian.org/debian bookworm/main amd64 nano amd64 7.2-1 [689 kB]
-Get:3 http://deb.debian.org/debian bookworm/main amd64 libgpm2 amd64 1.20.7-10+b1 [14.2 kB]
-Fetched 837 kB in 0s (34.4 MB/s)
-debconf: delaying package configuration, since apt-utils is not installed
-Selecting previously unselected package libncursesw6:amd64.
-(Reading database ... 6090 files and directories currently installed.)
-Preparing to unpack .../libncursesw6_6.4-4_amd64.deb ...
-Unpacking libncursesw6:amd64 (6.4-4) ...
-Selecting previously unselected package nano.
-Preparing to unpack .../archives/nano_7.2-1_amd64.deb ...
-Unpacking nano (7.2-1) ...
-Selecting previously unselected package libgpm2:amd64.
-Preparing to unpack .../libgpm2_1.20.7-10+b1_amd64.deb ...
-Unpacking libgpm2:amd64 (1.20.7-10+b1) ...
-Setting up libgpm2:amd64 (1.20.7-10+b1) ...
-Setting up libncursesw6:amd64 (6.4-4) ...
-Setting up nano (7.2-1) ...
-update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
-update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
-Processing triggers for libc-bin (2.36-9+deb12u7) ...
-root@e53e712fdcc0:/# cd /root
-root@e53e712fdcc0:~# nano helloworld.txt
+```
 
+5. Edit your helloworld.txt, create your messsage and save by typing ctrl-X. Once saved, explore using the container to see where the file is located. Then exit the shell, by typing **exit**.
 
-5. Edit your helloworld.txt, create your messsage and save by typing ctrl-X. Once saved, explore using the container to see where the file is located. Then exit the shell, by typing *exit*.
-![image](images/helloworld.png)
-
-6. Stop the container and run *docker ps -a*, and restart the container again. Is your file in the container still available?
-bash 
+6. Stop the container and run **docker ps -a**, and restart the container again. Is your file in the container still available?
+```bash 
 @joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
 f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
 
-bash
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker stop e53e712fdcc0
-
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker ps -a
-CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS         PORTS     NAMES
-e53e712fdcc0   debian    "bash"    15 minutes ago   Up 4 minutes             stupefied_keller
-
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker restart e53e712fdcc0
-
-
+@joeynor ➜ /workspaces/OSProject (main) $ docker restart romantic_jackson
+```
 
 7. Stop the container and delete the container. What happened to your helloworld.txt?
 
-bash 
+```bash 
 @joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
@@ -433,25 +354,13 @@ CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                      
 f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker rm romantic_jackson
+```
 
-bash
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker stop stupefied_keller
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker ps -a
-CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                       PORTS     NAMES
-e53e712fdcc0   debian    "bash"    23 minutes ago   Exited (137) 5 seconds ago             stupefied_keller
-@farisrosly ➜ /workspaces/NatSysProject (main) $ docker rm stupefied_keller
-e53e712fdcc0
+***Questions:***
 
+1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
 
-**Questions:**
-
-1. Are files in the container persistent. Why not?. *(1 mark)* _Fill answer here_.
-
-No, files in a Docker container are not persistent by default. This is because containers are designed to be ephemeral and stateless. When a container is deleted, its filesystem and any changes made within the container are also removed. To persist data beyond the life of a container, you need to use Docker volumes or bind mounts, which allow data to be stored on the host system and survive container restarts and deletions.
-
-2. Can we run two, or three instances of debian linux? . *(1 mark)* _Fill answer here_.
-
- Yes, you can run multiple instances of Debian Linux containers. Docker allows you to create and run multiple containers from the same image simultaneously. Each container runs in its own isolated environment with its own filesystem, processes, and network interfaces. To run multiple instances, you can simply execute the docker run command multiple times, and Docker will create and manage these instances independently.
 
 ## Running your own container with persistent storage
 
