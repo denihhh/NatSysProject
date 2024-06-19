@@ -22,9 +22,9 @@ Team Mates:
 
 ***Questions:***
 
-1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __Fill answer here__.
+1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** 
     https://github.com/denihhh/NatSysProject.git
-2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
+2. How many files and folders are in this repository. ***(1 mark)*** 
     There is 1 file name README.md and 1 folder name image
 
 
@@ -64,12 +64,16 @@ __Linux OS virtual environment.__.
 2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)***
 
  __RAM = 4GB/8GB__
+
 __DISK = 32GB/64GB__
+
 __VCPU = 2/4__
 
 3. Why must we commit and sync our current work on source control? ***(1 mark)***
 
- __Commit: Saves a snapshot of your code, tracks changes, and documents progress. Sync: Shares your changes with the team, backs up your work, and keeps everyone updated with the latest version__
+ __Commit: Saves a snapshot of your code, tracks changes, and documents progress.__
+
+ __Sync: Shares your changes with the team, backs up your work, and keeps everyone updated with the latest version__
 
 ## Exploring the Terminal
 
@@ -122,145 +126,39 @@ sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
 3. Run the command **df** . ***(1 mark)***
  ```bash
 Filesystem     1K-blocks     Used Available Use% Mounted on
-overlay         32847680 10411328  20742256  34% /
+overlay         32847680 10407568  20746012  34% /
 tmpfs              65536        0     65536   0% /dev
-shm                65536        0     65536   0% /dev/shm
-/dev/root       30298176 24301544   5980248  81% /vscode
-/dev/sda1       46127956      144  43752236   1% /tmp
-/dev/loop3      32847680 10411328  20742256  34% /workspaces
+shm                65536        8     65528   1% /dev/shm
+/dev/root       30298176 24249232   6032560  81% /vscode
+/dev/sdb1       46127956      116  43752264   1% /tmp
+/dev/loop3      32847680 10407568  20746012  34% /workspaces
 ```
 4. Run the command **du** . ***(1 mark)***
  ```bash
-1972    ./images
-8       ./.git/info
-4       ./.git/lfs/tmp
-8       ./.git/lfs
-68      ./.git/hooks
 4       ./.git/branches
-8       ./.git/refs/heads
-4       ./.git/refs/tags
-12      ./.git/refs/remotes/origin
-16      ./.git/refs/remotes
-32      ./.git/refs
-8       ./.git/objects/fc
-8       ./.git/objects/4e
-8       ./.git/objects/f6
-12      ./.git/objects/ab
-8       ./.git/objects/15
-8       ./.git/objects/fe
-12      ./.git/objects/70
-8       ./.git/objects/f2
-8       ./.git/objects/6c
-8       ./.git/objects/3f
-8       ./.git/objects/0b
-8       ./.git/objects/eb
-20      ./.git/objects/44
-8       ./.git/objects/81
-8       ./.git/objects/86
-12      ./.git/objects/46
-8       ./.git/objects/c3
-8       ./.git/objects/ea
-8       ./.git/objects/fd
-8       ./.git/objects/20
-12      ./.git/objects/57
-12      ./.git/objects/02
-12      ./.git/objects/1b
-8       ./.git/objects/24
-8       ./.git/objects/b9
-8       ./.git/objects/b2
-8       ./.git/objects/3a
-12      ./.git/objects/17
-8       ./.git/objects/45
-12      ./.git/objects/93
+8       ./.git/objects/73
+8       ./.git/objects/97
 4       ./.git/objects/info
-8       ./.git/objects/c6
-8       ./.git/objects/71
-8       ./.git/objects/5a
-8       ./.git/objects/19
-8       ./.git/objects/c5
-8       ./.git/objects/5b
-8       ./.git/objects/87
-12      ./.git/objects/e7
-12      ./.git/objects/1c
-8       ./.git/objects/58
-16      ./.git/objects/60
-8       ./.git/objects/30
-8       ./.git/objects/77
-12      ./.git/objects/af
-8       ./.git/objects/a3
-8       ./.git/objects/c4
-12      ./.git/objects/14
-12      ./.git/objects/d8
-12      ./.git/objects/9a
-8       ./.git/objects/83
-12      ./.git/objects/3c
-8       ./.git/objects/5e
-8       ./.git/objects/0f
-8       ./.git/objects/b6
-8       ./.git/objects/1d
-8       ./.git/objects/fa
-16      ./.git/objects/b5
-12      ./.git/objects/d2
-12      ./.git/objects/73
-8       ./.git/objects/2b
-8       ./.git/objects/cb
-12      ./.git/objects/e5
-12      ./.git/objects/a1
-8       ./.git/objects/a0
-8       ./.git/objects/0d
-12      ./.git/objects/e0
-12      ./.git/objects/27
-12      ./.git/objects/5f
-12      ./.git/objects/72
-12      ./.git/objects/ff
-20      ./.git/objects/7b
-8       ./.git/objects/ca
-8       ./.git/objects/4a
-20      ./.git/objects/8c
-12      ./.git/objects/64
-8       ./.git/objects/4f
-8       ./.git/objects/74
-12      ./.git/objects/6e
-12      ./.git/objects/e9
-8       ./.git/objects/41
-12      ./.git/objects/a7
-12      ./.git/objects/62
-8       ./.git/objects/98
-8       ./.git/objects/50
-1824    ./.git/objects/pack
-12      ./.git/objects/2e
-12      ./.git/objects/c0
-12      ./.git/objects/06
-12      ./.git/objects/d3
-8       ./.git/objects/9b
-8       ./.git/objects/a6
-12      ./.git/objects/80
-8       ./.git/objects/6a
-8       ./.git/objects/34
-8       ./.git/objects/43
-12      ./.git/objects/3d
-8       ./.git/objects/49
-16      ./.git/objects/fb
-12      ./.git/objects/88
-12      ./.git/objects/52
-8       ./.git/objects/91
-12      ./.git/objects/47
-20      ./.git/objects/d0
-8       ./.git/objects/96
-12      ./.git/objects/5c
-8       ./.git/objects/54
-12      ./.git/objects/f9
-12      ./.git/objects/cd
-20      ./.git/objects/4b
-12      ./.git/objects/04
-2956    ./.git/objects
+12      ./.git/objects/5d
+1888    ./.git/objects/pack
+1924    ./.git/objects
 8       ./.git/logs/refs/heads
 12      ./.git/logs/refs/remotes/origin
 16      ./.git/logs/refs/remotes
 28      ./.git/logs/refs
 36      ./.git/logs
-3144    ./.git
-5136    .
+68      ./.git/hooks
+4       ./.git/lfs/tmp
+8       ./.git/lfs
+4       ./.git/refs/tags
+8       ./.git/refs/heads
+12      ./.git/refs/remotes/origin
+16      ./.git/refs/remotes
+32      ./.git/refs
+8       ./.git/info
+2116    ./.git
+1972    ./images
+4116    .
  ```
 5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
 ```bash
@@ -268,17 +166,17 @@ README.md  images
 ```
 6. Run the command **ls -asl** . ***(1 mark)***
  ```bash
-total 36
- 4 drwxrwxrwx+ 4 codespace root  4096 Jun 11 05:42 .
- 4 drwxr-xrwx+ 5 codespace root  4096 Jun 11 05:42 ..
- 4 drwxrwxrwx+ 9 codespace root  4096 Jun 19 07:13 .git
-20 -rw-rw-rw-  1 codespace root 18174 Jun 19 07:24 README.md
- 4 drwxrwxrwx+ 2 codespace root  4096 Jun 11 05:42 images
+total 40
+ 4 drwxrwxrwx+ 4 codespace root  4096 Jun 19 08:47 .
+ 4 drwxr-xrwx+ 5 codespace root  4096 Jun 19 08:47 ..
+ 4 drwxrwxrwx+ 9 codespace root  4096 Jun 19 08:48 .git
+24 -rw-rw-rw-  1 codespace root 22656 Jun 19 08:51 README.md
+ 4 drwxrwxrwx+ 2 codespace root  4096 Jun 19 08:47 images
 ```
 7. Run the command **free -h** . ***(1 mark)*** 
 ```bash
               total        used        free      shared  buff/cache   available
-Mem:          7.7Gi       1.6Gi       412Mi        65Mi       5.7Gi       5.8Gi
+Mem:          7.7Gi       1.3Gi       246Mi        65Mi       6.2Gi       6.0Gi
 Swap:            0B          0B          0B
 ```
 8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** 
@@ -290,7 +188,7 @@ model           : 1
 model name      : AMD EPYC 7763 64-Core Processor
 stepping        : 1
 microcode       : 0xffffffff
-cpu MHz         : 2858.407
+cpu MHz         : 2592.381
 cache size      : 512 KB
 physical id     : 0
 siblings        : 2
@@ -304,7 +202,7 @@ cpuid level     : 13
 wp              : yes
 flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_t
 sc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm                                                                                                                                  bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
-bogomips        : 4890.84
+bogomips        : 4890.85
 TLB size        : 2560 4K pages
 clflush size    : 64
 cache_alignment : 64
@@ -318,7 +216,7 @@ model           : 1
 model name      : AMD EPYC 7763 64-Core Processor
 stepping        : 1
 microcode       : 0xffffffff
-cpu MHz         : 2842.218
+cpu MHz         : 2592.652
 cache size      : 512 KB
 physical id     : 0
 siblings        : 2
@@ -332,7 +230,7 @@ cpuid level     : 13
 wp              : yes
 flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_t
 sc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm                                                                                                                                  bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
-bogomips        : 4890.84
+bogomips        : 4890.85
 TLB size        : 2560 4K pages
 clflush size    : 64
 cache_alignment : 64
@@ -342,20 +240,66 @@ power management:
 
 9. Run the command **top** and type **q** to quit. ***(1 mark)*** 
 ```bash
-![alt text](image.png)
+top - 09:10:57 up 26 min,  0 users,  load average: 0.13, 0.16, 0.30
+Tasks:  18 total,   1 running,  17 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.2 us,  3.2 sy,  0.0 ni, 87.1 id,  6.5 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7929.6 total,    250.6 free,   1497.6 used,   6181.4 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6049.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   2597 codespa+  20   0   21.6g 394428  55168 S   6.2   4.9   0:42.87 node
+      1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.04 docker-init
+      7 codespa+  20   0    7236   1792   1792 S   0.0   0.0   0:00.01 sleep
+     48 root      20   0   12196   3480   2560 S   0.0   0.0   0:00.00 sshd
+   1423 codespa+  20   0    2616   1536   1536 S   0.0   0.0   0:00.01 sh
+   1464 root      20   0    2616   1408   1408 S   0.0   0.0   0:00.00 sh
+   2347 codespa+  20   0    2624   1536   1536 S   0.0   0.0   0:00.00 sh
+   2370 codespa+  20   0 1356668 103272  45440 S   0.0   1.3   0:08.13 node
+   2479 root      20   0 1983176  87260  52992 S   0.0   1.1   0:00.31 dockerd
+   2507 root      20   0 1872564  48220  30592 S   0.0   0.6   0:00.36 containerd
+   2706 codespa+  20   0 1240308  52308  41216 S   0.0   0.6   0:00.28 node
+   3306 codespa+  20   0 1117012  65112  42240 S   0.0   0.8   0:01.77 node
+   3813 codespa+  20   0 1021720  88556  40704 S   0.0   1.1   0:03.13 node
+   4295 codespa+  20   0    2616   1536   1536 S   0.0   0.0   0:00.01 sh
+   4349 root      20   0    2616   1664   1664 S   0.0   0.0   0:00.00 sh
+   4571 codespa+  20   0   16628  11520   3328 S   0.0   0.1   0:00.20 bash
+   5319 codespa+  20   0  994784  54008  40064 S   0.0   0.7   0:00.17 node
+  14580 codespa+  20   0   10880   3584   3200 R   0.0   0.0   0:00.00 top
 ```
 10. Run the command **uname -a**. ***(1 mark)***
 ```bash
-Linux codespaces-a1782f 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+Linux codespaces-0f7712 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 ```
 11. What is the available free memory in the system. ***(1 mark)*** 
+    6.0 GB available free memory
 
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+12. What is the available disk space mounted on /workspace. ***(1 mark)***  
+    20746012 KB
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** 
+    
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.6 LTS
+Release:        20.04
+Codename:       focal
+
+
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
+ls: Lists filenames in the directory.
+ls -asl: Lists all files (including hidden) with sizes and detailed information (permissions, owner, group, size, and timestamp).
+
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
+    TLB size        : 2560 4K pages
+
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
+    Processor 0:    cpu MHz   : 2592.381
+    Processor 1:    cpu MHz   : 2592.652
+    
+    from cat /proc/cpuinfo
+
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
+     Process node with PID 2597 is the top running process that has consumed the most CPU cycles overall (6.2%).
+
 
 ## Running your own container instance.
 
@@ -415,10 +359,12 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** 
+1. Are files in the container persistent. Why not?. ***(1 mark)***
+
     No, files in a Docker container are not persistent by default. This is because containers are designed to be ephemeral and stateless. When a container is deleted, its filesystem and any changes made within the container are also removed. To persist data beyond the life of a container, you need to use Docker volumes or bind mounts, which allow data to be stored on the host system and survive container restarts and deletions.
 
 2. Can we run two, or three instances of debian linux? . ***(1 mark)*** 
+
     Yes, you can run multiple instances of Debian Linux containers. Docker allows you to create and run multiple containers from the same image simultaneously. Each container runs in its own isolated environment with its own filesystem, processes, and network interfaces. To run multiple instances, you can simply execute the docker run command multiple times, and Docker will create and manage these instances independently.
 
 ## Running your own container with persistent storage
