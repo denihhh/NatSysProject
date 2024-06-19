@@ -395,14 +395,30 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)***\
+Answer: ***User: root, Group: root***
+```bash
+@denihhh ➜ /workspaces/NatSysProject (main) $ ls -l /workspaces/NatSysProject
+total 32
+-rw-rw-rw-  1 codespace root 22216 Jun 19 09:17 README.md
+drwxrwxrwx+ 2 codespace root  4096 Jun 19 08:47 images
+drwxrwxrwx+ 2 root      root  4096 Jun 19 09:37 myroot
+```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
-
 ```
-*** __Fill answer here__.***
+Answer: ***Yes***
+```bash
+@denihhh ➜ /workspaces/NatSysProject (main) $ sudo chown -R codespace:codespace myroot
+
+@denihhh ➜ /workspaces/NatSysProject (main) $ ls -l /workspaces/NatSysProject
+total 32
+-rw-rw-rw-  1 codespace root      22216 Jun 19 09:17 README.md
+drwxrwxrwx+ 2 codespace root       4096 Jun 19 08:47 images
+drwxrwxrwx+ 2 codespace codespace  4096 Jun 19 09:37 myroot
+```
 
 ## You are on your own, create your own static webpage
 
@@ -449,11 +465,53 @@ docker run -itd --net rednet --name c2 busybox sh
 ```
 ***Questions:***
 
-1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** __Fill answer here__.
+1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** 
+
+***Busybox***: A lightweight Linux distribution that combines many common Unix utilities into a single executable, often used in Docker containers for its minimalistic footprint.
+
+***'--name'***: This command switch in Docker assigns a specific name to a container, allowing it to be referenced by name in other Docker commands instead of by its container ID.
+
 2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)***
+```bash
+@denihhh ➜ /workspaces/NatSysProject/webpage (main) $ docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+6d516f3e62f5   bluenet   bridge    local
+2da0c429038c   bridge    bridge    local
+a9def5dee8bb   host      host      local
+a7ee13e4053d   none      null      local
+dc21aa325a02   rednet    bridge    local
+```
 3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)***
+
+***C1:***
+```bash
+"Gateway": "172.18.0.1",
+```
+
+***C2:***
+```bash
+"Gateway": "172.19.0.1",
+```
+
 4. What is the network address for the running container c1 and c2.
+
+***C1:***
+```bash
+"IPAddress": "172.18.0.2",
+```
+***C2:***
+```bash
+"IPAddress": "172.19.0.2",
+```
+
 5. Using the command ```docker exec c1 ping c2```, which basically issue a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)***
+
+Answer: No, cannot ping.
+Output:
+```bash
+@denihhh ➜ /workspaces/NatSysProject/webpage (main) $ docker exec c1 ping c2
+ping: bad address 'c2'
+```
 
 ## Bridging two SUB Networks
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
@@ -462,6 +520,24 @@ docker network create bridgenet
 docker network connect bridgenet c1
 docker network connect bridgenet c2
 docker exec c1 ping c2
+```
+Output:
+```bash
+@denihhh ➜ /workspaces/NatSysProject/webpage (main) $ docker network create bridgenet
+5e4da6a38b95b0d0e75153d015289d72e1309c226b276b4e0e3176cc2a330225
+@denihhh ➜ /workspaces/NatSysProject/webpage (main) $ docker network connect bridgenet c1
+@denihhh ➜ /workspaces/NatSysProject/webpage (main) $ docker network connect bridgenet c2
+
+@denihhh ➜ /workspaces/NatSysProject/webpage (main) $ docker exec c1 ping c2
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.076 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.076 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.059 ms
+64 bytes from 172.20.0.3: seq=3 ttl=64 time=0.070 ms
+64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.072 ms
+64 bytes from 172.20.0.3: seq=5 ttl=64 time=0.073 ms
+64 bytes from 172.20.0.3: seq=6 ttl=64 time=0.071 ms
+64 bytes from 172.20.0.3: seq=7 ttl=64 time=0.081 ms
 ```
 
 ## What to submit
