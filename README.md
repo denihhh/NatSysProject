@@ -444,9 +444,20 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** 
+
+    __drwxr-xr-x+ 2 root root 4096 Jun 19 11:26 /usr/local/apache2/htdocs__
+
+    __Owner (root) has full access, while the group (root) and others have read and execute permissions only.__
+
+
 2. What port is the apache web server running. ***(1 mark)***
+
+    __Port 80 inside the Docker container__
+
 3. What port is open for http protocol on the host machine? ***(1 mark)***
+
+    __Port 8080 on the host machine is mapped to port 80 inside the Docker container running the Apache web server, allowing access to the web server over HTTP__
 
 ## Create SUB Networks
 
